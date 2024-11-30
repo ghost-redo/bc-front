@@ -1,18 +1,19 @@
 import { Button } from "@/component/button";
-import styles from "./page.module.css";
+import { Checkbox } from "@/component/checkbox/checkbox";
+import { IconButton } from "@/component/icon-button";
 import { IconAdd } from "@/component/icon/icon-add";
 import { IconMoreOutlined } from "@/component/icon/more-outlined";
-import { IconButton } from "@/component/icon-button";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
+    <div>
       <Button start={<IconAdd color="white" />} type="button">
         추가
       </Button>
       <IconButton>
         <IconMoreOutlined />
       </IconButton>
+      <Checkbox defaultSelected />
     </div>
   );
 }

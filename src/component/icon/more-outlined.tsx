@@ -4,15 +4,16 @@ import { IconProps } from "./type";
 
 const IconMoreOutlined = (
   {
-    size = 16,
+    width = 16,
+    height = 16,
     color = "#27272a",
     ...props
   }: SVGProps<SVGSVGElement> & IconProps,
   ref: Ref<SVGSVGElement>
 ) => (
   <svg
-    width={size}
-    height={size}
+    width={width}
+    height={height}
     viewBox="0 0 16 16"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"

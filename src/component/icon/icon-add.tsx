@@ -3,12 +3,17 @@ import { Ref, forwardRef } from "react";
 import { IconProps } from "./type";
 
 const IconAdd = (
-  { size = 16, color, ...props }: SVGProps<SVGSVGElement> & IconProps,
+  {
+    width = 16,
+    height = 16,
+    color,
+    ...props
+  }: SVGProps<SVGSVGElement> & IconProps,
   ref: Ref<SVGSVGElement>
 ) => (
   <svg
-    width={size}
-    height={size}
+    width={width}
+    height={height}
     fill="none"
     viewBox="0 0 20 20"
     color={color}
