@@ -14,6 +14,7 @@ export const buttonStyles = cva({
     fontWeight: 400,
     fontSize: "14px",
     lineHeight: "22px",
+    color: "white",
     _hover: {
       backgroundColor: "#739FFF",
       "&:active": {
