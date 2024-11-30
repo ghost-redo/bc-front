@@ -1,8 +1,9 @@
 import { Button } from "@/component/button";
-import { Checkbox } from "@/component/checkbox/checkbox";
+import { Checkbox } from "@/component/checkbox";
 import { IconButton } from "@/component/icon-button";
 import { IconAdd } from "@/component/icon/icon-add";
 import { IconMoreOutlined } from "@/component/icon/more-outlined";
+import { Input } from "@/component/input";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
         <IconMoreOutlined />
       </IconButton>
       <Checkbox defaultSelected />
+      <Input placeholder="placeholder" />
     </div>
   );
 }
