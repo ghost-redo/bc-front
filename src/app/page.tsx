@@ -5,10 +5,10 @@ import { IconButton } from "@/component/icon-button";
 import { IconAdd } from "@/component/icon/icon-add";
 import { IconMoreOutlined } from "@/component/icon/icon-more-outlined";
 import { Input } from "@/component/input";
+import { Label } from "@/component/label/label";
 import { Select } from "@/component/select/select";
 import { useSelect } from "@/component/select/useSelect";
 import { TextArea } from "@/component/textarea";
-import { css } from "@/styled-system/css";
 
 export default function Home() {
   const { items, SelectList } = useSelect([
@@ -38,6 +38,7 @@ export default function Home() {
       <Select items={items} placeholder="선택" popoverWidth="200px">
         {SelectList}
       </Select>
+      <Label isRequired>Input Label</Label>
     </div>
   );
 }
