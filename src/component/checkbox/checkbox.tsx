@@ -41,3 +41,4 @@ export const Checkbox = forwardRef<HTMLLabelElement, BaseCheckboxProps>(
   }
 );
 Checkbox.displayName = "Checkbox";
+export type { BaseCheckboxProps as CheckboxProps };
