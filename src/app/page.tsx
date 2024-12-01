@@ -9,8 +9,12 @@ import { Label } from "@/component/label/label";
 import { Select } from "@/component/select/select";
 import { useSelect } from "@/component/select/useSelect";
 import { TextArea } from "@/component/textarea";
+import { useState } from "react";
+import DatePicker from "react-datepicker";
 
 export default function Home() {
+  const [dateState, setDateState] = useState<Date | null>(new Date());
+
   const { items, SelectList } = useSelect([
     {
       id: 1,
@@ -39,6 +43,10 @@ export default function Home() {
         {SelectList}
       </Select>
       <Label isRequired>Input Label</Label>
+      <DatePicker
+        selected={dateState}
+        onChange={(date) => setDateState(date)}
+      />
     </div>
   );
 }
