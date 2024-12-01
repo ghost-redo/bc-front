@@ -24,8 +24,8 @@ export const selectStyles = sva({
       border: "1px solid",
       borderColor: "transparent",
       background: "white",
-      padding: 10,
-      borderRadius: 8,
+      padding: "4px",
+      borderRadius: "8px",
       boxShadow:
         "0px 2px 5px 0px rgba(70, 70, 70, 0.20), 0px 0px 1px 0px rgba(132, 132, 132, 0.31);",
       width: "var(--trigger-width)",
@@ -41,15 +41,20 @@ export const selectStyles = sva({
     listBoxItem: {
       display: "flex",
       width: "100%",
-      height: 32,
-      minHeight: 32,
-      padding: "6px 8px",
+      padding: "5px 12px",
       alignItems: "center",
       alignSelf: "stretch",
       textStyle: "b3",
       borderRadius: 4,
       gap: 6,
       cursor: "pointer",
+      _hover: {
+        background: "#f4f4f5",
+      },
+      _selected: {
+        color: "#739FFF",
+        background: "#F0F7FF",
+      },
     },
   },
 });
