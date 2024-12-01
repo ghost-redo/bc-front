@@ -4,6 +4,7 @@ import { IconButton } from "@/component/icon-button";
 import { IconAdd } from "@/component/icon/icon-add";
 import { IconMoreOutlined } from "@/component/icon/more-outlined";
 import { Input } from "@/component/input";
+import { TextArea } from "@/component/textarea";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       </IconButton>
       <Checkbox defaultSelected />
       <Input placeholder="placeholder" />
+      <TextArea placeholder="placeholder" />
     </div>
   );
 }
