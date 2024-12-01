@@ -1,5 +1,4 @@
 "use client";
-import { ReactNode } from "react";
 import { ListBoxItem } from "react-aria-components";
 import { selectStyles } from "./styles";
 

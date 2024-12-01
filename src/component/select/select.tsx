@@ -15,14 +15,16 @@ import {
 } from "react-aria-components";
 import { IconDownOutlined } from "../icon/icon-down-outlined";
 import { selectStyles, triggerStyles } from "./styles";
+import { CSSProperties } from "react";
 
-interface SelectProps<T extends object>
+export interface SelectProps<T extends object>
   extends Omit<AriaSelectProps<T>, "children"> {
   label?: string;
   description?: string;
   errorMessage?: string | ((validation: ValidationResult) => string);
   items?: Iterable<T>;
   children: React.ReactNode | ((item: T) => React.ReactNode);
+  popoverWidth?: CSSProperties["width"];
 }
 
 export function Select<T extends object>({
@@ -32,6 +34,7 @@ export function Select<T extends object>({
   className,
   items,
   children,
+  popoverWidth,
   ...props
 }: SelectProps<T>) {
   const selectClass = selectStyles();
@@ -68,7 +71,10 @@ export function Select<T extends object>({
           <SelectTrigger isOpen={props.isOpen} isInvalid={props.isInvalid}>
             <SelectValue className={selectClass["selectValue"]} />
           </SelectTrigger>
-          <Popover className={selectClass["popover"]}>
+          <Popover
+            className={selectClass["popover"]}
+            style={{ width: popoverWidth || "100%" }}
+          >
             <ListBox
               selectionMode="single"
               className={css({
@@ -108,10 +114,12 @@ const SelectTrigger = ({
       )}
       {...props}
     >
-      {composeRenderProps(children, (children) => (
+      {composeRenderProps(children, (children, renderProps) => (
         <>
           {children}
-          <IconDownOutlined />
+          <IconDownOutlined
+            color={renderProps.isHovered ? "#739FFF" : "black"}
+          />
         </>
       ))}
     </Button>

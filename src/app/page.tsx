@@ -8,6 +8,7 @@ import { Input } from "@/component/input";
 import { Select } from "@/component/select/select";
 import { useSelect } from "@/component/select/useSelect";
 import { TextArea } from "@/component/textarea";
+import { css } from "@/styled-system/css";
 
 export default function Home() {
   const { items, SelectList } = useSelect([
@@ -34,7 +35,9 @@ export default function Home() {
       <Checkbox defaultSelected />
       <Input placeholder="placeholder" />
       <TextArea placeholder="placeholder" />
-      <Select items={items}>{SelectList}</Select>
+      <Select items={items} placeholder="선택" popoverWidth="200px">
+        {SelectList}
+      </Select>
     </div>
   );
 }
